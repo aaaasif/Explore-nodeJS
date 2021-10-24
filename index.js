@@ -28,10 +28,12 @@ app.get('/users', (req, res) => {
         res.send(users)
     }
 });
-app.get('/users/:id', (req, res) => {
-    const id = req.params.id;
-    const user = users[id]
-    res.send(user)
+app.get('/fruits', (req, res) => {
+    res.send(['mango', 'oranges', 'banana', 'apple'])
+})
+
+app.get('/fruits/mangoes/fazli', (req, res) => {
+    res.send('Yummy Yummy tok marka fazli');
 })
 
 app.listen(port, () => {
